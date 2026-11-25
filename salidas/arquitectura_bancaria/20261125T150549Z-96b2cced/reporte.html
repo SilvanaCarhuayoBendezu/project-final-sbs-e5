@@ -1,0 +1,119 @@
+<!doctype html><html lang='es'><meta charset='utf-8'><title>Extracción bancaria</title><style>body{font:16px system-ui;margin:2rem}table{border-collapse:collapse}td,th{padding:.4rem;text-align:left;border:1px solid #ccc}th{background:#eef3f8}</style><h1>Extracción documental bancaria</h1><p><a href='documentos.parquet'>documentos.parquet</a> · <a href='paginas.parquet'>paginas.parquet</a> · <a href='regiones.parquet'>regiones.parquet</a> · <a href='campos.parquet'>campos.parquet</a> · <a href='calidad.parquet'>calidad.parquet</a></p><h2>Cobertura</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Indicador</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Documentos</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Páginas</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td>Tablas</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>Gráficos OCR</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>Páginas OCR</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Campos</td>
+      <td>164</td>
+    </tr>
+    <tr>
+      <td>Alertas</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>ok</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>revisar</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Documentos</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>archivo</th>
+      <th>entidad</th>
+      <th>clasificadora</th>
+      <th>tipo_pdf</th>
+      <th>num_paginas</th>
+      <th>estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AGROBANCO/APOYO Y ASOCIADOS INTERNACIONALES/B+_e5c84757b53e.pdf</td>
+      <td>AGROBANCO</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>ALFIN BANCO/JCR LATINO AMERICA/A-_a88eaa4adf96.pdf</td>
+      <td>ALFIN BANCO</td>
+      <td>JCR LATINO AMERICA</td>
+      <td>mixto</td>
+      <td>27</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>ALFIN BANCO/PCR (PACIFIC CREDIT RATING)/B+_bb5600d68af9.pdf</td>
+      <td>ALFIN BANCO</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>13</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANBIF/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_07e741879141.pdf</td>
+      <td>BANBIF</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Alertas de calidad</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>archivo</th>
+      <th>pagina</th>
+      <th>regla</th>
+      <th>detalle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ALFIN BANCO/PCR (PACIFIC CREDIT RATING)/B+_bb5600d68af9.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice B+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANBIF/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_07e741879141.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+  </tbody>
+</table></html>

@@ -1,0 +1,897 @@
+<!doctype html><html lang='es'><meta charset='utf-8'><title>Extracción bancaria</title><style>body{font:16px system-ui;margin:2rem}table{border-collapse:collapse}td,th{padding:.4rem;text-align:left;border:1px solid #ccc}th{background:#eef3f8}</style><h1>Extracción documental bancaria</h1><p><a href='documentos.parquet'>documentos.parquet</a> · <a href='paginas.parquet'>paginas.parquet</a> · <a href='regiones.parquet'>regiones.parquet</a> · <a href='campos.parquet'>campos.parquet</a> · <a href='calidad.parquet'>calidad.parquet</a></p><h2>Cobertura</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Indicador</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Documentos</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td>Páginas</td>
+      <td>516</td>
+    </tr>
+    <tr>
+      <td>Tablas</td>
+      <td>356</td>
+    </tr>
+    <tr>
+      <td>Gráficos OCR</td>
+      <td>206</td>
+    </tr>
+    <tr>
+      <td>Páginas OCR</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Campos</td>
+      <td>1545</td>
+    </tr>
+    <tr>
+      <td>Alertas</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>ok</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>revisar</td>
+      <td>32</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Documentos</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>archivo</th>
+      <th>entidad</th>
+      <th>clasificadora</th>
+      <th>tipo_pdf</th>
+      <th>num_paginas</th>
+      <th>estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AGROBANCO/APOYO Y ASOCIADOS INTERNACIONALES/B+_e5c84757b53e.pdf</td>
+      <td>AGROBANCO</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>ALFIN BANCO/JCR LATINO AMERICA/A-_a88eaa4adf96.pdf</td>
+      <td>ALFIN BANCO</td>
+      <td>JCR LATINO AMERICA</td>
+      <td>mixto</td>
+      <td>27</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>ALFIN BANCO/PCR (PACIFIC CREDIT RATING)/B+_bb5600d68af9.pdf</td>
+      <td>ALFIN BANCO</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>13</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANBIF/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_07e741879141.pdf</td>
+      <td>BANBIF</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANBIF/PCR (PACIFIC CREDIT RATING)/A+_3d4c843f48ba.pdf</td>
+      <td>BANBIF</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>12</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO BCI/APOYO Y ASOCIADOS INTERNACIONALES/A_85216f0ff534.pdf</td>
+      <td>BANCO BCI</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCO BCI/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_e1af4894f310.pdf</td>
+      <td>BANCO BCI</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/APOYO Y ASOCIADOS INTERNACIONALES/A+_589d1852a7b2.pdf</td>
+      <td>BANCO DE CREDITO</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_07a04c86538c.pdf</td>
+      <td>BANCO DE CREDITO</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>BANCO DE CREDITO</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>11</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/JCR LATINO AMERICA/A_f107a23a9005.pdf</td>
+      <td>BANCO EFECTIVA</td>
+      <td>JCR LATINO AMERICA</td>
+      <td>mixto</td>
+      <td>28</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_0b10d1668b88.pdf</td>
+      <td>BANCO EFECTIVA</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/PCR (PACIFIC CREDIT RATING)/A-_a6700b3476ba.pdf</td>
+      <td>BANCO EFECTIVA</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>12</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO FALABELLA/APOYO Y ASOCIADOS INTERNACIONALES/A_f2b217a51038.pdf</td>
+      <td>BANCO FALABELLA</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCO FALABELLA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_673e53b904d7.pdf</td>
+      <td>BANCO FALABELLA</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_92624d89812d.pdf</td>
+      <td>BANCO GNB</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>BANCO GNB</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>12</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO PICHINCHA/APOYO Y ASOCIADOS INTERNACIONALES/A-_e3c655fbf069.pdf</td>
+      <td>BANCO PICHINCHA</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>mixto</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCO PICHINCHA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_327f10724472.pdf</td>
+      <td>BANCO PICHINCHA</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO RIPLEY/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_293cf3a663fb.pdf</td>
+      <td>BANCO RIPLEY</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>8</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANCO RIPLEY/PCR (PACIFIC CREDIT RATING)/B+_20b17432f28f.pdf</td>
+      <td>BANCO RIPLEY</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>12</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCOM/APOYO Y ASOCIADOS INTERNACIONALES/B+_52c7d0c4a16e.pdf</td>
+      <td>BANCOM</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>BANCOM</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>8</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/APOYO Y ASOCIADOS INTERNACIONALES/A+_31129dbf292c.pdf</td>
+      <td>BANK OF CHINA (PERU)</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>8</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>BANK OF CHINA (PERU)</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>8</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BBVA/APOYO Y ASOCIADOS INTERNACIONALES/A+_2c7560c2b632.pdf</td>
+      <td>BBVA</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>11</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BBVA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_6fa6b0863564.pdf</td>
+      <td>BBVA</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BN. SANTANDER CONS/APOYO Y ASOCIADOS INTERNACIONALES/A_20d0fb197726.pdf</td>
+      <td>BN. SANTANDER CONS.</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>BN. SANTANDER CONS/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_1e6b8b342f31.pdf</td>
+      <td>BN. SANTANDER CONS.</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/APOYO Y ASOCIADOS INTERNACIONALES/A+_88852fd4db98.pdf</td>
+      <td>CITIBANK DEL PERU</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>CITIBANK DEL PERU</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>11</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>COFIDE/APOYO Y ASOCIADOS INTERNACIONALES/A_10974f23a142.pdf</td>
+      <td>COFIDE</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>mixto</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>COFIDE/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_53caf9e12520.pdf</td>
+      <td>COFIDE</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>5</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>COMPARTAMOS BANCO/APOYO Y ASOCIADOS INTERNACIONALES/A_3d270309fcc3.pdf</td>
+      <td>COMPARTAMOS BANCO</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>COMPARTAMOS BANCO/JCR LATINO AMERICA/A_29091c7d6cd1.pdf</td>
+      <td>COMPARTAMOS BANCO</td>
+      <td>JCR LATINO AMERICA</td>
+      <td>mixto</td>
+      <td>24</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>COMPARTAMOS BANCO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_add983ec1ed4.pdf</td>
+      <td>COMPARTAMOS BANCO</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>ICBC PERU BANK S.A/APOYO Y ASOCIADOS INTERNACIONALES/A+_4a6fb582b1b5.pdf</td>
+      <td>ICBC PERU BANK S.A.</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>8</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>ICBC PERU BANK S.A/PCR (PACIFIC CREDIT RATING)/A_31cc72520dc0.pdf</td>
+      <td>ICBC PERU BANK S.A.</td>
+      <td>PCR (PACIFIC CREDIT RATING)</td>
+      <td>digital</td>
+      <td>13</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>INTERBANK/APOYO Y ASOCIADOS INTERNACIONALES/A+_6daa65f605df.pdf</td>
+      <td>INTERBANK</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>INTERBANK/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_4059daa3be0a.pdf</td>
+      <td>INTERBANK</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>MIBANCO/APOYO Y ASOCIADOS INTERNACIONALES/A_34520118bb66.pdf</td>
+      <td>MIBANCO</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>11</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>MIBANCO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_926380565e4d.pdf</td>
+      <td>MIBANCO</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>NACION/APOYO Y ASOCIADOS INTERNACIONALES/A_fca7d3a205e3.pdf</td>
+      <td>NACION</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>mixto</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>NACION/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_483e10c64914.pdf</td>
+      <td>NACION</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>10</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>SANTANDER PERU/APOYO Y ASOCIADOS INTERNACIONALES/A+_00127e2d69da.pdf</td>
+      <td>SANTANDER PERU</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>ok</td>
+    </tr>
+    <tr>
+      <td>SANTANDER PERU/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_23b48a76cf31.pdf</td>
+      <td>SANTANDER PERU</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>SCOTIABANK PERU/APOYO Y ASOCIADOS INTERNACIONALES/A+_0f031abd6566.pdf</td>
+      <td>SCOTIABANK PERU</td>
+      <td>APOYO Y ASOCIADOS INTERNACIONALES</td>
+      <td>digital</td>
+      <td>11</td>
+      <td>revisar</td>
+    </tr>
+    <tr>
+      <td>SCOTIABANK PERU/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_6b795e40256c.pdf</td>
+      <td>SCOTIABANK PERU</td>
+      <td>MOODYS LOCAL PE CLASIFICADORA DE RIESGO</td>
+      <td>digital</td>
+      <td>9</td>
+      <td>revisar</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Alertas de calidad</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>archivo</th>
+      <th>pagina</th>
+      <th>regla</th>
+      <th>detalle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ALFIN BANCO/PCR (PACIFIC CREDIT RATING)/B+_bb5600d68af9.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice B+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANBIF/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_07e741879141.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANBIF/PCR (PACIFIC CREDIT RATING)/A+_3d4c843f48ba.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO BCI/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_e1af4894f310.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_07a04c86538c.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO DE CREDITO/PCR (PACIFIC CREDIT RATING)/A+_0c5bada0de27.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/JCR LATINO AMERICA/A_f107a23a9005.pdf</td>
+      <td>20.0</td>
+      <td>tabla_sin_celdas</td>
+      <td>[111.48, 443.3, 136.01, 513.29]</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/JCR LATINO AMERICA/A_f107a23a9005.pdf</td>
+      <td>20.0</td>
+      <td>tabla_sin_celdas</td>
+      <td>[77.52, 455.91, 102.05, 513.29]</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_0b10d1668b88.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A-; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO EFECTIVA/PCR (PACIFIC CREDIT RATING)/A-_a6700b3476ba.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A-; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO FALABELLA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_673e53b904d7.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_92624d89812d.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Total Patrimonio</td>
+    </tr>
+    <tr>
+      <td>BANCO GNB/PCR (PACIFIC CREDIT RATING)/A_04653fe2c5b9.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO PICHINCHA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_327f10724472.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A-; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCO RIPLEY/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_293cf3a663fb.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice B+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>4.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANCOM/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/B+_5cf2e98909fa.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice B+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Capital Global</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.N.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>5.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>Ratio de Liquidez en M.E.</td>
+    </tr>
+    <tr>
+      <td>BANK OF CHINA (PERU)/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_8796bd3d7171.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BBVA/APOYO Y ASOCIADOS INTERNACIONALES/A+_2c7560c2b632.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BBVA/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_6fa6b0863564.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BN. SANTANDER CONS/APOYO Y ASOCIADOS INTERNACIONALES/A_20d0fb197726.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>BN. SANTANDER CONS/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_1e6b8b342f31.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>RATIO DE LIQUIDEZ ME (SBS)</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>RATIO DE LIQUIDEZ ME (SBS)</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>RATIO DE LIQUIDEZ ME (SBS)</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>RATIO DE LIQUIDEZ ME (SBS)</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>11.0</td>
+      <td>indicador_sin_periodo</td>
+      <td>RATIO DE LIQUIDEZ ME (SBS)</td>
+    </tr>
+    <tr>
+      <td>CITIBANK DEL PERU/PCR (PACIFIC CREDIT RATING)/A+_fe68fd90369a.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>COFIDE/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_53caf9e12520.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>COMPARTAMOS BANCO/APOYO Y ASOCIADOS INTERNACIONALES/A_3d270309fcc3.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>COMPARTAMOS BANCO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A-_add983ec1ed4.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A-; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>ICBC PERU BANK S.A/PCR (PACIFIC CREDIT RATING)/A_31cc72520dc0.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>INTERBANK/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_4059daa3be0a.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>MIBANCO/APOYO Y ASOCIADOS INTERNACIONALES/A_34520118bb66.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>MIBANCO/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_926380565e4d.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>NACION/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A_483e10c64914.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>SANTANDER PERU/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_23b48a76cf31.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>SCOTIABANK PERU/APOYO Y ASOCIADOS INTERNACIONALES/A+_0f031abd6566.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+    <tr>
+      <td>SCOTIABANK PERU/MOODYS LOCAL PE CLASIFICADORA DE RIESGO/A+_6b795e40256c.pdf</td>
+      <td>NaN</td>
+      <td>calificacion_sin_evidencia</td>
+      <td>Índice A+; sin coincidencia rotulada</td>
+    </tr>
+  </tbody>
+</table></html>

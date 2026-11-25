@@ -1,0 +1,7 @@
+﻿motor,campo,precision,recall,f1,n,aciertos
+Reglas,perspectiva,1.0,1.0,1.0,2,1
+Reglas,activos_jun_2026,1.0,1.0,1.0,2,1
+Ollama / qwen3.5:4b,perspectiva,1.0,1.0,1.0,2,1
+Ollama / qwen3.5:4b,activos_jun_2026,1.0,1.0,1.0,2,1
+Ollama / qwen3.5:9b,perspectiva,1.0,1.0,1.0,2,1
+Ollama / qwen3.5:9b,activos_jun_2026,1.0,1.0,1.0,2,1

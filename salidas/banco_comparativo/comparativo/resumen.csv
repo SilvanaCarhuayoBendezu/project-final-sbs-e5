@@ -1,0 +1,12 @@
+﻿tarea,motor,casos_ok,omitidos,errores,cer,wer,puntaje_ocr,confianza,segundos,precision,recall,f1,cobertura,tasa_sin_evidencia
+texto,Tesseract,3,0,0,0.004830917874396135,0.037037037037037035,0.981,0.9603333333333333,0.1685967332062622,,,,,
+texto,PaddleOCR,0,3,0,,,,,,,,,,
+texto,PyMuPDF,3,0,0,0.004830917874396135,0.037037037037037035,,,0.017212833588322003,,,,,
+texto,pdfplumber,3,0,0,0.004830917874396135,0.037037037037037035,,,0.21261616656556726,,,,,
+tablas,PyMuPDF,1,0,0,,,,,0.04837920004501939,0.0,0.0,0.0,,
+tablas,pdfplumber,1,0,0,,,,,0.21346479980275035,0.0,0.0,0.0,,
+tablas,tabula-py,1,0,0,,,,,0.7198214000090957,1.0,1.0,1.0,,
+campos,Reglas,2,0,0,,,,,9.899958968162537e-06,,,1.0,1.0,0.0
+campos,Ollama / qwen3.5:4b,2,0,0,,,,,14.090159950079396,,,1.0,1.0,0.0
+campos,Ollama / qwen3.5:9b,2,0,0,,,,,28.9272451500874,,,1.0,1.0,0.0
+campos,Hugging Face / Qwen/Qwen2.5-0.5B-Instruct,0,2,0,,,,,,,,,,
